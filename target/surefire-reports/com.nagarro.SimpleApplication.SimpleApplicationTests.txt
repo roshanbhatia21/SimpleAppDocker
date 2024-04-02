@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.nagarro.SimpleApplication.SimpleApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.543 s - in com.nagarro.SimpleApplication.SimpleApplicationTests
