@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the Spring Boot application
-                sh './mvnw clean package'
+                bat 'mvnw clean package' // Use 'bat' instead of 'sh' for Windows
             }
         }
 
@@ -27,7 +27,7 @@ pipeline {
                 // Run the Docker container
                 script {
                     docker.image(DOCKER_IMAGE).withRun('-p 8099:8080') { c ->
-                        echo "Container ${c.id} is running"
+                        echo "Container ${c.id} is running on port 8099"
                     }
                 }
             }
@@ -41,5 +41,7 @@ pipeline {
                 }
             }
         }
+    }
+}
     }
 }
